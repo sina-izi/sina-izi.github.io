@@ -17,24 +17,25 @@
 }
 
 .button {
-  background-color: #61dafb;
-  border: none;
-  color: white;
+  background-color: transparent; /* No background by default */
+  border: none; /* Remove border */
+  color: white; /* Set the text color */
   padding: 15px 30px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transitions */
+  width: 150px; /* Fixed width for equal size buttons */
 }
 
 .button:hover {
-  background-color: #21a1f1;
+  background-color: #61dafb; /* Change background color on hover */
+  color: #282c34; /* Invert the text color on hover */
   cursor: pointer;
 }
 
 .content {
   padding: 40px;
 }
-

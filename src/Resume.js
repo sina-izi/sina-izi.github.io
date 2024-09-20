@@ -10,6 +10,7 @@ function Resume() {
         <a href="/resume.pdf" download>
           <button 
             style={{
+              width: '200px',  // Set fixed width
               padding: '10px 20px',
               fontSize: '16px',
               backgroundColor: '#61dafb',
@@ -19,13 +20,14 @@ function Resume() {
               cursor: 'pointer'
             }}
           >
-            Download Resume
+            Download
           </button>
         </a>
 
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
           <button 
             style={{
+              width: '200px',  // Set fixed width
               padding: '10px 20px',
               fontSize: '16px',
               backgroundColor: '#21a1f1',
@@ -34,7 +36,7 @@ function Resume() {
               cursor: 'pointer'
             }}
           >
-            Open Resume in New Tab
+            Open PDF
           </button>
         </a>
       </div>
@@ -43,7 +45,7 @@ function Resume() {
       <iframe 
         src="/resume.pdf" 
         width="100%" 
-        height="1000px" 
+        height="900px" 
         title="Resume"
         style={{ border: '1px solid #ccc', borderRadius: '8px' }}
       >
