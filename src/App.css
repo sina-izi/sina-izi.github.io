@@ -54,10 +54,13 @@
 
 .button:hover {
   color: #00c8ff;
+  font-weight: bold;
+  transform: scale(1.10);
 }
 
 .button:active {
   font-weight: bold;
+  transform: scale(0.95);
 }
 
 .content {
