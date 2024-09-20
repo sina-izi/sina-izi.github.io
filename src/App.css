@@ -37,6 +37,7 @@
   justify-content: center; /* Center all buttons */
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .button {
@@ -66,4 +67,43 @@
 .content {
   padding: 40px;
   transition: background-color 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  .nav-buttons {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 10px; /* Reduce space between buttons */
+  }
+
+  .button {
+    width: 100%; /* Full-width buttons on small screens */
+    padding: 12px 20px; /* Reduce padding on small screens */
+  }
+
+  .App-header {
+    padding: 10px; /* Smaller header padding on mobile */
+  }
+
+  .content {
+    padding: 20px; /* Reduce content padding on mobile */
+  }
+}
+
+/* Tablets (between 601px and 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .button {
+    width: 80%; /* Slightly wider buttons on tablets */
+    padding: 12px 25px; /* Adjust button padding for tablets */
+  }
+
+  .nav-buttons {
+    gap: 15px; /* Adjust gap between buttons for tablets */
+  }
+
+  .App-header {
+    padding: 15px; /* Adjust header padding for tablets */
+  }
 }
