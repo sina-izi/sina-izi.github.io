@@ -28,18 +28,22 @@
 }
 
 .App-header {
-  background-color: inherit; /* Set via theme mode */
+  background-color: inherit;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Navigation for Desktop */
 .nav-buttons {
   display: flex;
-  justify-content: center; /* Center all buttons */
+  justify-content: center; /* Already centered */
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 20px; /* Keep this to add space between buttons */
 }
 
+/* Button Styles */
 .button {
   background-color: transparent;
   color: inherit;
@@ -48,13 +52,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border: none; /* No border */
+  border: none; /* Ensure no border */
   transition: color 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
-  width: 150px; /* Ensure all buttons are the same size */
+  width: 150px;
 }
 
 .button:hover {
-  color: #00c8ff;
+  color: #00c8ff; /* Keep the hover effect */
   font-weight: bold;
   transform: scale(1.10);
 }
@@ -69,41 +73,39 @@
   transition: background-color 0.3s ease;
 }
 
-/* Media Queries for Responsiveness */
+/* --- Mobile Styles --- */
 
-/* Small devices (phones, less than 600px) */
-@media (max-width: 600px) {
-  .nav-buttons {
-    flex-direction: column; /* Stack buttons vertically on small screens */
-    gap: 10px; /* Reduce space between buttons */
-  }
-
-  .button {
-    width: 100%; /* Full-width buttons on small screens */
-    padding: 12px 20px; /* Reduce padding on small screens */
-  }
-
-  .App-header {
-    padding: 10px; /* Smaller header padding on mobile */
-  }
-
-  .content {
-    padding: 20px; /* Reduce content padding on mobile */
-  }
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-/* Tablets (between 601px and 768px) */
-@media (min-width: 601px) and (max-width: 768px) {
-  .button {
-    width: 80%; /* Slightly wider buttons on tablets */
-    padding: 12px 25px; /* Adjust button padding for tablets */
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  background-color: inherit;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .nav-buttons {
+    display: none; /* Hide normal nav buttons on mobile */
   }
 
-  .nav-buttons {
-    gap: 15px; /* Adjust gap between buttons for tablets */
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile */
   }
 
   .App-header {
-    padding: 15px; /* Adjust header padding for tablets */
+    justify-content: flex-start;
   }
 }

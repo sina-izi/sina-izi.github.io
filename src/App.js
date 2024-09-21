@@ -7,15 +7,36 @@ import Blog from './Blog';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // For controlling mobile menu
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <Router>
       <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
         <header className="App-header">
+          {/* Hamburger Menu for Mobile */}
+          <div className="hamburger" onClick={toggleMenu}>
+            &#9776; {/* Hamburger icon */}
+          </div>
+
+          {/* Dropdown Menu for Mobile */}
+          <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+            <Link className="button" to="/" onClick={toggleMenu}>Home</Link>
+            <Link className="button" to="/resume" onClick={toggleMenu}>Resume</Link>
+            <Link className="button" to="/blog" onClick={toggleMenu}>Blog</Link>
+            <button className="button theme-toggle" onClick={() => { toggleTheme(); toggleMenu(); }}>
+              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+          </nav>
+
+          {/* Normal Menu for Desktop */}
           <nav className="nav-buttons">
             <Link className="button" to="/">Home</Link>
             <Link className="button" to="/resume">Resume</Link>
