@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
-import Resume from './Resume';
-import Blog from './Blog';
+import Blog from './Blog'; // Remove Resume import
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -29,7 +28,7 @@ function App() {
           {/* Dropdown Menu for Mobile */}
           <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
             <Link className="button" to="/" onClick={toggleMenu}>Home</Link>
-            <Link className="button" to="/resume" onClick={toggleMenu}>Resume</Link>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button" onClick={toggleMenu}>Resume</a> {/* PDF Link */}
             <Link className="button" to="/blog" onClick={toggleMenu}>Blog</Link>
             <button className="button theme-toggle" onClick={() => { toggleTheme(); toggleMenu(); }}>
               {isDarkMode ? 'Light Mode' : 'Dark Mode'}
@@ -39,7 +38,7 @@ function App() {
           {/* Normal Menu for Desktop */}
           <nav className="nav-buttons">
             <Link className="button" to="/">Home</Link>
-            <Link className="button" to="/resume">Resume</Link>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">Resume</a> {/* PDF Link */}
             <Link className="button" to="/blog">Blog</Link>
             <button className="button theme-toggle" onClick={toggleTheme}>
               {isDarkMode ? 'Light Mode' : 'Dark Mode'}
@@ -50,7 +49,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Resume />} />
+            {/* Remove the /resume route */}
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </div>
