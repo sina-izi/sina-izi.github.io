@@ -1,0 +1,52 @@
+.home-container {
+    padding: 20px;
+  }
+  
+  /* About Me Section */
+  .about-me h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Picture Styles */
+  .about-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between picture and text */
+    object-fit: cover;
+  }
+  
+  /* Text Styles */
+  .about-text {
+    max-width: 600px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  /* --- Responsive Styles for Desktop --- */
+  @media (min-width: 768px) {
+    .about-content {
+      flex-direction: row; /* Picture on the left, text on the right */
+      align-items: flex-start;
+    }
+  
+    .about-picture {
+      margin-right: 20px; /* Space between picture and text */
+      margin-bottom: 0; /* Remove bottom margin */
+    }
+  
+    .about-text {
+      text-align: left;
+      padding: 0;
+    }
+      
+  }
+  
