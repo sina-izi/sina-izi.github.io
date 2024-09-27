@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
-import Blog from './Blog'; // Remove Resume import
+import Blog from './Blog';
+import MyStory from './MyStory'; // Import the new component
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -28,8 +29,9 @@ function App() {
           {/* Dropdown Menu for Mobile */}
           <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
             <Link className="button" to="/" onClick={toggleMenu}>Home</Link>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button" onClick={toggleMenu}>Resume</a> {/* PDF Link */}
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button" onClick={toggleMenu}>Resume</a>
             <Link className="button" to="/blog" onClick={toggleMenu}>Blog</Link>
+            <Link className="button" to="/my-story" onClick={toggleMenu}>My Story</Link> {/* New Button for mobile */}
             <button className="button theme-toggle" onClick={() => { toggleTheme(); toggleMenu(); }}>
               {isDarkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
@@ -38,8 +40,9 @@ function App() {
           {/* Normal Menu for Desktop */}
           <nav className="nav-buttons">
             <Link className="button" to="/">Home</Link>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">Resume</a> {/* PDF Link */}
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">Resume</a>
             <Link className="button" to="/blog">Blog</Link>
+            <Link className="button" to="/my-story">My Story</Link> {/* New Button for desktop */}
             <button className="button theme-toggle" onClick={toggleTheme}>
               {isDarkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
@@ -49,8 +52,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* Remove the /resume route */}
             <Route path="/blog" element={<Blog />} />
+            <Route path="/my-story" element={<MyStory />} /> {/* New Route */}
           </Routes>
         </div>
       </div>
