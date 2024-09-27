@@ -6,7 +6,7 @@
 
 .light-mode .button,
 .light-mode .App-header {
-  background-color: #e0e0e0; /* Make the header and buttons the same color */
+  background-color: #e0e0e0;
 }
 
 /* Dark Mode Styles */
@@ -17,7 +17,7 @@
 
 .dark-mode .button,
 .dark-mode .App-header {
-  background-color: #333; /* Make the header and buttons the same color */
+  background-color: #333;
 }
 
 .App {
@@ -38,9 +38,9 @@
 /* Navigation for Desktop */
 .nav-buttons {
   display: flex;
-  justify-content: center; /* Already centered */
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* Keep this to add space between buttons */
+  gap: 20px;
 }
 
 /* Button Styles */
@@ -52,13 +52,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border: none; /* Ensure no border */
+  border: none;
   transition: color 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
   width: 150px;
 }
 
 .button:hover {
-  color: #00c8ff; /* Keep the hover effect */
+  color: #00c8ff;
   font-weight: bold;
   transform: scale(1.10);
 }
@@ -80,20 +80,26 @@
   display: none;
   font-size: 30px;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* Mobile Menu */
 .mobile-menu {
   display: none;
   flex-direction: column;
-  align-items: center; /* Change to center to align everything in the middle */
-  gap: 10px;
-  padding: 10px;
+  align-items: center; /* Align everything in the middle */
+  position: absolute; /* Make it a dropdown by positioning it absolutely */
+  top: 60px; /* Position the menu below the header */
+  left: 0;
+  right: 0;
   background-color: inherit;
+  z-index: 10; /* Ensure it appears on top */
 }
 
 .mobile-menu.open {
-  display: flex;
+  display: flex; /* Show the dropdown when open */
 }
 
 @media (max-width: 600px) {
@@ -103,10 +109,11 @@
 
   .hamburger {
     display: block; /* Show hamburger menu on mobile */
-    align-items: center; /* Ensure buttons align in the center */
   }
 
   .App-header {
     justify-content: flex-start;
+    position: relative;
+    height: 40px;
   }
 }
