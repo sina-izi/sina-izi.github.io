@@ -3,6 +3,12 @@ import './MyStory.css';
 
 const timelineData = [
   {
+    year: 2019,
+    title: "2019 - The Big Start",
+    text: "This is the description for 2019. Key events and highlights.",
+    image: "path_to_image_2019.jpg",
+  },
+  {
     year: 2020,
     title: "2020 - A Remarkable Year",
     text: "This is the description for 2020. Key events and highlights.",
@@ -41,7 +47,7 @@ const timelineData = [
 ];
 
 function MyStory() {
-  const [activeYear, setActiveYear] = useState(2020);
+  const [activeYear, setActiveYear] = useState(2019);
   const sectionsRef = useRef([]);
 
   useEffect(() => {
