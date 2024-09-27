@@ -5,7 +5,7 @@ import Home from './Home';
 import Blog from './Blog'; // Remove Resume import
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false); // For controlling mobile menu
 
   const toggleTheme = () => {
