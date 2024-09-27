@@ -41,6 +41,7 @@
   .timeline-node.active .timeline-year {
     font-size: 18px;
     font-weight: bold;
+    color: #00c8ff;
   }
   
   .story-content {
