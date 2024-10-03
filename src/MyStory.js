@@ -4,8 +4,8 @@ import './MyStory.css';
 const timelineData = [
   {
     year: 2019,
-    title: "2019 - The Big Start",
-    text: "This is the description for 2019. Key events and highlights.",
+    title: "2019 - Free and Responsible",
+    text: "In 2019 I moved to the United States.",
     image: "path_to_image_2019.jpg",
   },
   {
