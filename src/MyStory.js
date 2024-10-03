@@ -4,25 +4,25 @@ import './MyStory.css';
 const timelineData = [
   {
     year: 2019,
-    title: "2019 - Free and Responsible",
-    text: "In 2019 I moved to the United States.",
+    title: "2019 - Free but ...",
+    text: "In 2019 I moved to the United States.responsibility, loneliness",
     image: "path_to_image_2019.jpg",
   },
   {
     year: 2020,
-    title: "2020 - A Remarkable Year",
+    title: "2020 - The BIG Reset",
     text: "This is the description for 2020. Key events and highlights.",
     image: "path_to_image_2020.jpg",
   },
   {
     year: 2021,
-    title: "2021 - Another Big Year",
+    title: "2021 - The 2nd Chance",
     text: "This is the description for 2021. Major events of the year.",
     image: "path_to_image_2021.jpg",
   },
   {
     year: 2022,
-    title: "2022 - Progress Continues",
+    title: "2022 - Track Everything",
     text: "This is the description for 2022. Significant milestones.",
     image: "path_to_image_2022.jpg",
   },
