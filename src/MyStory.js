@@ -5,13 +5,37 @@ const timelineData = [
   {
     year: 2019,
     title: "2019 - Flight sweat and tears",
-    text: "In 2019 I moved to the United States.responsibility, loneliness",
+    text: `I still remember the last goodbye. It was heartbreaking but full of hope.
+    Hope for a better future, a better life, and an uncertain reunion. As I was moving 
+    towards the airport TTC, I could see their warm smiles and teary eyes fade away.
+    I left them behind. I left my parents, friends, and everyone I cared for behind.
+    So that I can pursue my own American dream, hoping that one day I will see them 
+    in better circumstances. But as much as I was sad, I was excited. Not only was I 
+    going to the land of opportunities, the United States of America, but also I was 
+    going to the capital of the world, the big apple, the city that never sleeps, NYC. 
+    This was my dream city since I was a kid. So I would be lying if I said I was not 
+    super excited to finally be able to go there, especially knowing that I got rejected 
+    3 times before I finally got accepted! This was a great opportunity for me to finally 
+    grow up, learn to become independent, and build a great future for myself and those 
+    who love me.`,
     image: "path_to_image_2019.jpg",
   },
   {
     year: 2020,
     title: "2020 - The great reset",
-    text: "This is the description for 2020. Key events and highlights.",
+    text: `I still remember the last goodbye. It was heartbreaking but full of hope.
+    Hope for a better future, a better life, and an uncertain reunion. As I was moving 
+    towards the airport TTC, I could see their warm smiles and teary eyes fade away.
+    I left them behind. I left my parents, friends, and everyone I cared for behind.
+    So that I can pursue my own American dream, hoping that one day I will see them 
+    in better circumstances. But as much as I was sad, I was excited. Not only was I 
+    going to the land of opportunities, the United States of America, but also I was 
+    going to the capital of the world, the big apple, the city that never sleeps, NYC. 
+    This was my dream city since I was a kid. So I would be lying if I said I was not 
+    super excited to finally be able to go there, especially knowing that I got rejected 
+    3 times before I finally got accepted! This was a great opportunity for me to finally 
+    grow up, learn to become independent, and build a great future for myself and those 
+    who love me.`,
     image: "path_to_image_2020.jpg",
   },
   {
@@ -46,35 +70,6 @@ const timelineData = [
   },
 ];
 
-// Select all timeline nodes and year sections
-const timelineNodes = document.querySelectorAll('.timeline-node');
-const yearSections = document.querySelectorAll('.year-section');
-
-window.addEventListener('scroll', () => {
-  // Get the current scroll position
-  const scrollPosition = window.scrollY;
-  
-  // Track which year section is in view
-  yearSections.forEach((section, index) => {
-      const sectionTop = section.offsetTop;
-      const sectionBottom = sectionTop + section.clientHeight;
-      
-      // Check if section is in view
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          // Set the current node as active and show the year
-          timelineNodes.forEach((node, nodeIndex) => {
-              if (nodeIndex === index) {
-                  node.classList.add('active');
-                  node.querySelector('.timeline-year').style.display = 'inline';
-              } else {
-                  node.classList.remove('active');
-                  node.querySelector('.timeline-year').style.display = 'none';
-              }
-          });
-      }
-  });
-});
-
 function MyStory() {
   const [activeYear, setActiveYear] = useState(2019);
   const sectionsRef = useRef([]);
@@ -82,7 +77,7 @@ function MyStory() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -126,7 +121,7 @@ function MyStory() {
             data-year={item.year}
             className="year-section"
           >
-            <div className={`year-content ${activeYear === item.year ? 'visible' : ''}`}>
+            <div className="year-card">
               <h1>{item.title}</h1>
               <img src={item.image} alt={`Image for ${item.year}`} />
               <p>{item.text}</p>

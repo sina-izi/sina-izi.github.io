@@ -1,12 +1,53 @@
 .my-story-page {
   display: flex;
-  position: relative;
+  justify-content: center;
+  padding: 20px;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Set a maximum width for centered content */
+  margin: auto; /* Center content horizontally */
+  padding-left: 100px; /* Offset for the timeline */
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+.year-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.year-card img {
+  width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.year-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.year-card p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .timeline {
   position: fixed;
-  left: 50px; /* Moved the timeline slightly to the right */
+  left: 20px; /* Keep timeline fixed on the left */
   top: 20%;
   display: flex;
   flex-direction: column;
@@ -42,12 +83,6 @@
   font-size: 18px;
   font-weight: bold;
   color: #00c8ff;
-}
-
-.story-content {
-  margin-left: 120px; /* Space for the timeline on the left */
-  padding-top: 50px;
-  width: 100%;
 }
 
 .year-section {
@@ -87,12 +122,20 @@
 /* Mobile view - timeline on top, horizontal */
 @media (max-width: 768px) {
   .timeline {
-      position: fixed;
-      top: 60px; /* Adjusted to leave space for the menu */
-      left: 0;
-      flex-direction: row;
-      justify-content: space-around; /* Spread out nodes */
-      padding: 10px;
+    position: fixed;
+    top: 90px; /* Adjusted to leave space for the menu */
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around; /* Spread out nodes */
+    padding: 10px;
+    margin-bottom: 20px; /* Space below the timeline */
+  }
+
+  .story-content {
+    margin: auto; /* Center content */
+    padding-left: 0; /* Remove left padding for mobile */
+    padding-top: 0;
   }
 
   .timeline-node {
@@ -111,4 +154,3 @@
       color: #00c8ff;
   }
 }
-
