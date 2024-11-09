@@ -1,86 +1,114 @@
 .my-story-page {
-    display: flex;
-    position: relative;
-    height: auto;
-  }
-  
+  display: flex;
+  position: relative;
+  height: auto;
+}
+
+.timeline {
+  position: fixed;
+  left: 50px; /* Moved the timeline slightly to the right */
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  z-index: 10;
+}
+
+.timeline-node {
+  display: flex;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #bbb;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.timeline-node.active {
+  transform: scale(1.5); /* Enlarge the node when active */
+  background-color: #00c8ff; /* Change color when active */
+}
+
+.timeline-year {
+  margin-left: 20px; /* Space between the node and the year label */
+  font-size: 14px;
+  color: #333;
+  transition: font-size 0.3s ease;
+}
+
+.timeline-node.active .timeline-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00c8ff;
+}
+
+.story-content {
+  margin-left: 120px; /* Space for the timeline on the left */
+  padding-top: 50px;
+  width: 100%;
+}
+
+.year-section {
+  padding: 50px 20px;
+  min-height: 100vh; /* Make each section at least the height of the viewport */
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.year-section.visible {
+  opacity: 1;
+}
+
+.year-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.year-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.year-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.year-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Mobile view - timeline on top, horizontal */
+@media (max-width: 768px) {
   .timeline {
-    position: fixed; /* Keeps the timeline on the left side */
-    left: 0;
-    top: 20%; /* Vertically center the timeline */
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    z-index: 10;
+      position: fixed;
+      top: 60px; /* Adjusted to leave space for the menu */
+      left: 0;
+      flex-direction: row;
+      justify-content: space-around; /* Spread out nodes */
+      padding: 10px;
   }
-  
+
   .timeline-node {
-    display: flex;
-    align-items: center;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #bbb;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    position: relative;
+      width: 10px; /* Smaller nodes for mobile */
+      height: 10px;
   }
-  
-  .timeline-node.active {
-    transform: scale(1.5); /* Enlarge the node when active */
-    background-color: #00c8ff; /* Change color when active */
-  }
-  
+
   .timeline-year {
-    margin-left: 20px; /* Space between the node and the year label */
-    font-size: 14px;
-    color: #333;
-    transition: font-size 0.3s ease;
+      display: none; /* Hide year labels initially */
   }
-  
+
   .timeline-node.active .timeline-year {
-    font-size: 18px;
-    font-weight: bold;
-    color: #00c8ff;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      color: #00c8ff;
   }
-  
-  .story-content {
-    margin-left: 120px; /* Space for the timeline on the left */
-    padding-top: 50px;
-    width: 100%;
-  }
-  
-  .year-section {
-    padding: 50px 20px;
-    min-height: 100vh; /* Make each section at least the height of the viewport */
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  
-  .year-section.visible {
-    opacity: 1;
-  }
-  
-  .year-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .year-content img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .year-content h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .year-content p {
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
-  
+}
+

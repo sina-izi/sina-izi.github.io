@@ -46,6 +46,35 @@ const timelineData = [
   },
 ];
 
+// Select all timeline nodes and year sections
+const timelineNodes = document.querySelectorAll('.timeline-node');
+const yearSections = document.querySelectorAll('.year-section');
+
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const scrollPosition = window.scrollY;
+  
+  // Track which year section is in view
+  yearSections.forEach((section, index) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.clientHeight;
+      
+      // Check if section is in view
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          // Set the current node as active and show the year
+          timelineNodes.forEach((node, nodeIndex) => {
+              if (nodeIndex === index) {
+                  node.classList.add('active');
+                  node.querySelector('.timeline-year').style.display = 'inline';
+              } else {
+                  node.classList.remove('active');
+                  node.querySelector('.timeline-year').style.display = 'none';
+              }
+          });
+      }
+  });
+});
+
 function MyStory() {
   const [activeYear, setActiveYear] = useState(2019);
   const sectionsRef = useRef([]);
