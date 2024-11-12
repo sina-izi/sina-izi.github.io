@@ -37,7 +37,7 @@
 
 /* Centered Navigation Bar */
 .nav-buttons {
-  position: absolute;
+  position: fixed;
   top: 20px; /* Distance from the top */
   left: 50%;
   transform: translateX(-50%); /* Center horizontally */
@@ -93,6 +93,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  position: fixed;
 }
 
 /* Mobile Menu */
@@ -106,10 +107,12 @@
   right: 0;
   background-color: inherit;
   z-index: 10;
+  position: fixed;
 }
 
 .mobile-menu.open {
   display: flex;
+  position: fixed;
 }
 
 @media (max-width: 600px) {
@@ -123,8 +126,9 @@
 
   .App-header {
     justify-content: flex-start;
-    position: relative;
+    position: fixed;
     height: 80px;
+    width: 100%;
   }
 }
 
