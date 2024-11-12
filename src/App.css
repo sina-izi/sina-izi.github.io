@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 /* Light Mode Styles */
 .light-mode {
   background-color: #f0f0f0;
@@ -22,7 +24,7 @@
 
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Inconsolata', monospace;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
