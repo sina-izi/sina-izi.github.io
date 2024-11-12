@@ -35,34 +35,36 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-header {
-  background-color: inherit;
-  padding: 20px;
+/* Centered Navigation Bar */
+.nav-buttons {
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
+  padding: 10px 20px; /* Add padding around the buttons */
+  background-color: inherit; /* Optional: translucent background */
+  border-radius: 8px; /* Optional: rounded corners */
 }
 
-/* Navigation for Desktop */
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
 
 /* Button Styles */
 .button {
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
   background-color: transparent;
   color: inherit;
-  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  width: 150px;
+  height: 50px; /* Set a fixed height for consistent centering */
   border: none;
   transition: color 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
-  width: 150px;
+  cursor: pointer;
 }
 
 .button:hover {

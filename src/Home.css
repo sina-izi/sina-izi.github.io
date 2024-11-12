@@ -5,6 +5,7 @@
   /* About Me Section */
   .about-me h2 {
     text-align: center;
+    margin-top: 60px;
     margin-bottom: 20px;
   }
   
@@ -13,23 +14,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px; /* Add space from menu bar if needed */
   }
   
-  /* Picture Styles */
   .about-picture {
     width: 200px;
     height: 200px;
-    border-radius: 8px;
+    border-radius: 50%; /* Make the image circular */
     margin-bottom: 20px; /* Space between picture and text */
     object-fit: cover;
   }
   
-  /* Text Styles */
   .about-text {
     max-width: 600px;
     text-align: center;
     padding: 0 20px;
   }
+  
   
   /* --- Responsive Styles for Desktop --- */
   @media (min-width: 768px) {
