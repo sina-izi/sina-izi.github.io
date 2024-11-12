@@ -23,7 +23,16 @@ function App() {
         <header className="App-header">
           {/* Hamburger Menu for Mobile */}
           <div className="hamburger" onClick={toggleMenu}>
-            &#9776; {/* Hamburger icon */}
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 100 100"
+            className={menuOpen ? 'open' : ''}
+          >
+            <rect id="top-line" width="80" height="10" x="10" y="30" rx="5" />
+            <rect id="middle-line" width="80" height="10" x="10" y="50" rx="5" />
+            <rect id="bottom-line" width="80" height="10" x="10" y="70" rx="5" />
+          </svg>
           </div>
 
           {/* Dropdown Menu for Mobile */}
