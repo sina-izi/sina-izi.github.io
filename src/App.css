@@ -216,3 +216,17 @@ svg {
     opacity: 0;
   }
 }
+
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle svg {
+  width: 30px; /* Adjust this value */
+  height: 30px; /* Adjust this value */
+}

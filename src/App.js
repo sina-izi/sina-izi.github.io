@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { AiOutlineSun, AiOutlineMoon } from 'react-icons/ai';
 import './App.css';
 import Home from './Home';
 import Blog from './Blog';
@@ -23,16 +24,16 @@ function App() {
         <header className="App-header">
           {/* Hamburger Menu for Mobile */}
           <div className="hamburger" onClick={toggleMenu}>
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 100 100"
-            className={menuOpen ? 'open' : ''}
-          >
-            <rect id="top-line" width="80" height="10" x="10" y="30" rx="5" />
-            <rect id="middle-line" width="80" height="10" x="10" y="50" rx="5" />
-            <rect id="bottom-line" width="80" height="10" x="10" y="70" rx="5" />
-          </svg>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 100 100"
+              className={menuOpen ? 'open' : ''}
+            >
+              <rect id="top-line" width="80" height="10" x="10" y="30" rx="5" />
+              <rect id="middle-line" width="80" height="10" x="10" y="50" rx="5" />
+              <rect id="bottom-line" width="80" height="10" x="10" y="70" rx="5" />
+            </svg>
           </div>
 
           {/* Dropdown Menu for Mobile */}
@@ -42,7 +43,7 @@ function App() {
             <Link className="button" to="/blog" onClick={toggleMenu}>Blog</Link>
             <Link className="button" to="/my-story" onClick={toggleMenu}>My Story</Link> {/* New Button for mobile */}
             <button className="button theme-toggle" onClick={() => { toggleTheme(); toggleMenu(); }}>
-              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
             </button>
           </nav>
 
@@ -53,7 +54,7 @@ function App() {
             <Link className="button" to="/blog">Blog</Link>
             <Link className="button" to="/my-story">My Story</Link> {/* New Button for desktop */}
             <button className="button theme-toggle" onClick={toggleTheme}>
-              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
             </button>
           </nav>
         </header>
