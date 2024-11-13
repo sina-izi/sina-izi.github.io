@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AiOutlineSun, AiOutlineMoon } from 'react-icons/ai';
 import './App.css';
@@ -17,6 +17,18 @@ function App() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Use an effect to add or remove the "hide-timeline" class based on menuOpen state
+  useEffect(() => {
+    const timelineElement = document.querySelector('.timeline');
+    if (timelineElement) {
+      if (menuOpen) {
+        timelineElement.classList.add('hide-timeline');
+      } else {
+        timelineElement.classList.remove('hide-timeline');
+      }
+    }
+  }, [menuOpen]);
 
   return (
     <Router>

@@ -70,19 +70,28 @@
 .timeline-node.active {
   transform: scale(1.5); /* Enlarge the node when active */
   background-color: #00c8ff; /* Change color when active */
+  text-align: center;
+  align-items: center;
 }
 
 .timeline-year {
-  margin-left: 20px; /* Space between the node and the year label */
   font-size: 14px;
   color: #333;
   transition: font-size 0.3s ease;
+  display: block;
 }
 
 .timeline-node.active .timeline-year {
   font-size: 18px;
   font-weight: bold;
   color: #00c8ff;
+}
+
+/* Apply margin-left only on desktop */
+@media (min-width: 769px) {
+  .timeline-year {
+    margin-left: 20px; /* Space between the node and the year label */
+  }
 }
 
 .year-section {
@@ -119,38 +128,62 @@
   max-width: 600px;
 }
 
-/* Mobile view - timeline on top, horizontal */
+/* Mobile View */
 @media (max-width: 768px) {
   .timeline {
     position: fixed;
-    top: 90px; /* Adjusted to leave space for the menu */
-    left: 0;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: space-around; /* Spread out nodes */
-    padding: 10px;
-    margin-bottom: 20px; /* Space below the timeline */
+    gap: 30px;
+    padding: 10px 20px;
+    z-index: 10;
+    border-radius: 8px;
   }
 
   .story-content {
-    margin: auto; /* Center content */
-    padding-left: 0; /* Remove left padding for mobile */
+    margin: auto;
+    padding-left: 0;
     padding-top: 0;
   }
 
   .timeline-node {
-      width: 10px; /* Smaller nodes for mobile */
-      height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    flex-direction: column;
   }
 
+  .timeline-node.active {
+    transform: scale(1.5);
+    background-color: #00c8ff;
+  }
+
+  /* Hide all year labels initially on mobile */
   .timeline-year {
-      display: none; /* Hide year labels initially */
+    display: none;
   }
 
+  /* Show only the active year's label on mobile */
   .timeline-node.active .timeline-year {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: bold;
-      color: #00c8ff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #00c8ff;
+    text-align: center;
+    margin-top: 25px; /* Space between the node and the year label */
+  }
+
+  /* CSS to hide the timeline when the menu is open */
+  .hide-timeline {
+    display: none !important; /* Hide the timeline regardless of other styles */
   }
 }

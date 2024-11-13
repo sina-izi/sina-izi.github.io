@@ -108,7 +108,9 @@ function MyStory() {
             key={item.year}
             className={`timeline-node ${activeYear === item.year ? 'active' : ''}`}
           >
-            <span className="timeline-year">{item.year}</span>
+            {activeYear === item.year && (
+              <span className="timeline-year">{item.year}</span>
+            )}
           </div>
         ))}
       </div>
