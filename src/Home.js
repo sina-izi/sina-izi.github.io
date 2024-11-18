@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import aboutText from 'texts/AboutText';
+import aboutText from './texts/AboutText';
 
 function Home() {
   return (
