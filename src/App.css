@@ -30,9 +30,15 @@
 
 .App {
   text-align: center;
+  overflow-y: auto;
   font-family: 'Inconsolata', monospace;
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body, html {
+  height: 100%;
+  overflow-y: auto; /* Enable scrolling globally */
 }
 
 /* Centered Navigation Bar */
@@ -46,6 +52,7 @@
   padding: 10px 20px; /* Add padding around the buttons */
   background-color: inherit; /* Optional: translucent background */
   border-radius: 8px; /* Optional: rounded corners */
+  z-index: 1000;
 }
 
 
@@ -79,7 +86,6 @@
 }
 
 .content {
-  padding: 40px;
   transition: background-color 0.3s ease;
 }
 
@@ -94,6 +100,7 @@
   top: 20px;
   right: 20px;
   position: fixed;
+  z-index: 1000;
 }
 
 /* Mobile Menu */
@@ -106,22 +113,25 @@
   left: 0;
   right: 0;
   background-color: inherit;
-  z-index: 10;
+  z-index: 1000;
   position: fixed;
 }
 
 .mobile-menu.open {
   display: flex;
   position: fixed;
+  z-index: 1000;
 }
 
 @media (max-width: 600px) {
   .nav-buttons {
     display: none;
+    z-index: 1000;
   }
 
   .hamburger {
     display: block;
+    z-index: 1000;
   }
 
   .App-header {
@@ -129,6 +139,7 @@
     position: fixed;
     height: 80px;
     width: 100%;
+    z-index: 1000;
   }
 }
 

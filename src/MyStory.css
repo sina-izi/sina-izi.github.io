@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+  overflow-y: visible;
 }
 
 .story-content {
@@ -14,12 +15,13 @@
   padding-left: 100px; /* Offset for the timeline */
   padding-top: 50px;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .year-card {
   width: 100%;
   max-width: 100%; /* Allow the card to expand */
-  min-height: 80vh; /* Make the card take most of the screen height */
+  min-height: 500px; /* Make the card take most of the screen height */
   margin: 20px auto; /* Center the card horizontally and vertically */
   padding: 40px; /* Add some inner spacing */
   border-radius: 12px; /* Rounded corners for aesthetics */
@@ -33,6 +35,7 @@
   justify-content: center; /* Center content vertically */
   text-align: center;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .year-card img {
@@ -103,7 +106,7 @@
 
 .year-section {
   padding: 50px 20px;
-  min-height: 100vh; /* Make each section at least the height of the viewport */
+  min-height: auto; /* Make each section at least the height of the viewport */
   opacity: 1;
   transition: opacity 0.5s ease;
 }
@@ -148,6 +151,7 @@
     padding: 10px 20px;
     z-index: 10;
     border-radius: 8px;
+    z-index: 1000;
   }
 
   .story-content {
@@ -167,6 +171,7 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
     position: relative;
     flex-direction: column;
+    z-index: 1000;
   }
 
   .timeline-node.active {
@@ -187,6 +192,7 @@
     color: #00c8ff;
     text-align: center;
     margin-top: 25px; /* Space between the node and the year label */
+    z-index: 1000;
   }
 
   /* CSS to hide the timeline when the menu is open */

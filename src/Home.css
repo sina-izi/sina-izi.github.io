@@ -1,76 +1,116 @@
+/* General Home Container Styles */
 .home-container {
-  padding: 20px;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
 }
 
 /* About Me Section */
-.about-me h2 {
+.about-me {
+  position: relative;
+  z-index: 2; /* Keep it above the animation */
+  background-color: rgba(255, 255, 255, 0.7); /* Slight white overlay */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-family: monospace; /* Optional for typewriter feel */
 }
 
-/* Typewriter Effect */
+/* Heading Typewriter Effect */
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #00c8ff; /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Centers content */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: 
-      typing 1s steps(11, end) forwards, /* Ensure it stays at full width after typing */
-      blink-caret 0.75s step-end infinite;
-  width: 0; /* Start width at 0 to animate typing */
+  overflow: hidden;
+  border-right: 0.15em solid #00c8ff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(22, end) forwards, blink-caret 0.75s step-end infinite; /* Add 'forwards' here */
+  width: 0; /* Start width at 0 for typing effect */
+  font-family: monospace;
+  color: #000000;
 }
 
-/* The typing effect */
+/* Typewriter Animations */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 15ch; } /* Adjust to match the character count of the text */
+  from {
+    width: 0;
+  }
+  to {
+    width: 16ch; /* Adjust to the character count of "Hi, I'm Sina!" */
+  }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #00c8ff; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00c8ff;
+  }
 }
 
+/* About Content Styles */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 20px; /* Add space from menu bar if needed */
+  margin-top: 20px;
 }
 
 .about-picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* Make the image circular */
-  margin-bottom: 20px; /* Space between picture and text */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
   object-fit: cover;
+  border: 2px solid #00c8ff;
 }
 
 .about-text {
   max-width: 600px;
   text-align: center;
-  padding: 0 20px;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #000000;
 }
 
-/* --- Responsive Styles for Desktop --- */
+/* Responsive Layout for Larger Screens */
 @media (min-width: 768px) {
   .about-content {
-      flex-direction: row; /* Picture on the left, text on the right */
-      align-items: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .about-picture {
-      margin-right: 20px; /* Space between picture and text */
-      margin-bottom: 0; /* Remove bottom margin */
+    margin-right: 20px;
   }
 
   .about-text {
-      text-align: left;
-      padding: 0;
+    text-align: left;
   }
+}
+
+/* Infinite Corridor Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place behind the content */
+  overflow: auto;
+}
+
+/* Adjust body styles for seamless animation */
+body {
+  margin: 0;
+  padding: 0;
+  background: black; /* Matches the animation's base */
+  color: white;
+  font-family: Arial, sans-serif;
 }
