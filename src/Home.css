@@ -14,11 +14,16 @@
 .about-me {
   position: relative;
   z-index: 2; /* Keep it above the animation */
-  background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay */
+  background-color: rgba(var(--about-me-bg-color), 0.8); /* Slight overlay following mode */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: var(--about-me-font-color); /* Adjust font color based on mode */
+}
+
+.about-me .about-text {
+  color: inherit; /* Ensure child elements inherit the font color */
 }
 
 /* Heading Typewriter Effect */
@@ -31,7 +36,7 @@
   animation: typing 2s steps(22, end) forwards, blink-caret 0.75s step-end infinite; /* Add 'forwards' here */
   width: 0; /* Start width at 0 for typing effect */
   font-family: monospace;
-  color: #000000;
+  color: inherit;
 }
 
 /* Typewriter Animations */

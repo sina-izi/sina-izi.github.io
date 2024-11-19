@@ -4,12 +4,18 @@
 :root {
   --hamburger-color-light: #000; /* Dark lines for light mode */
   --hamburger-color-dark: #fff; /* Light lines for dark mode */
+  --about-me-bg-color-light: 255, 255, 255; /* White for light mode */
+  --about-me-bg-color-dark: 28, 28, 28; /* Dark gray for dark mode */
+  --about-me-font-color-light: #000; /* Black font for light mode */
+  --about-me-font-color-dark: #fff; /* White font for dark mode */
 }
 
 /* Light Mode Styles */
 .light-mode {
   background-color: #f0f0f0;
   color: #000;
+  --about-me-bg-color: var(--about-me-bg-color-light);
+  --about-me-font-color: var(--about-me-font-color-light);
 }
 
 .light-mode .button,
@@ -21,6 +27,8 @@
 .dark-mode {
   background-color: #1c1c1c;
   color: #fff;
+  --about-me-bg-color: var(--about-me-bg-color-dark);
+  --about-me-font-color: var(--about-me-font-color-dark);
 }
 
 .dark-mode .button,
