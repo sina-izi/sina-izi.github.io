@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './MyStory.css';
+import image2019 from './images/2019.jpeg';
+import image2020 from './images/2020.jpeg';
+import image2021 from './images/2021.jpeg';
 
 
 const timelineData = [
@@ -9,19 +12,19 @@ const timelineData = [
     text: `My journey started here when I came to the United States to chase my own 
     American dream. Of course, it wasn’t going to be a smooth ride all the way. After all, 
     this was my first time being away from my family. Back home, I was a spoiled kid who 
-    had never opened a bank account or worried much about spending or planning. Being 
+    had never even opened a bank account or worried much about spending or planning. Being 
     away from home meant that I had to learn to become independent.`,
-    image: "https://drive.google.com/uc?id=1MPudyZcAu3K6S-s0yO3XibYGsoAHEKBe",
+    image: image2019,
   },
   {
     year: 2020,
     title: "2020 The great reset",
     text: `This was the year I got into NYU. Now, I had a big name behind me that 
     opened many new doors. It also gave me the much-needed confidence to believe in 
-    myself. However, there was one small problem—the pandemic! No fun events or 
-    friendships at school. There was another issue: I couldn’t make any friends 
-    because of COVID policies. This resulted in a lonely period in my life.`,
-    image: "path_to_image_2020.jpg",
+    myself. However, there was one small problem, the pandemic! Meaning no fun events
+    at school. There was another bigger issue tho: I couldn’t make any friends 
+    because of COVID policies. This resulted in a very lonely period in my life.`,
+    image: image2020,
   },
   {
     year: 2021,
@@ -33,7 +36,7 @@ const timelineData = [
     inspiration from game psychology and developed an automatic ranking system and 
     visual stats, like graphs, to make the process more fun and engaging. After all, 
     why shouldn’t I use those techniques for a good addiction?`,
-    image: "path_to_image_2022.jpg",
+    image: image2021,
   },
   {
     year: 2022,
