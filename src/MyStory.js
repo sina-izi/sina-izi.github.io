@@ -11,7 +11,7 @@ const timelineData = [
     this was my first time being away from my family. Back home, I was a spoiled kid who 
     had never even opened a bank account or worried much about spending or planning. Being 
     away from home meant that I had to learn to become independent.`,
-    image: "https://i.postimg.cc/Bbsd2Ny8/temp-Image-DUT2io.avif",
+    image: "https://i.postimg.cc/x1btTMxB/temp-Image-VDAm-A2.avif",
   },
   {
     year: 2020,
@@ -21,7 +21,7 @@ const timelineData = [
     myself. However, there was one small problem, the pandemic! Meaning no fun events
     at school. There was another bigger issue tho: I couldn’t make any friends 
     because of COVID policies. This resulted in a very lonely period in my life.`,
-    image: "https://i.postimg.cc/wMVn2L8w/temp-Image3ib2ib.avif",
+    image: "https://i.postimg.cc/bvcLGr4r/temp-Imagenw-Ihrk.avif",
   },
   {
     year: 2021,
@@ -33,7 +33,7 @@ const timelineData = [
     inspiration from game psychology and developed an automatic ranking system and 
     visual stats, like graphs, to make the process more fun and engaging. After all, 
     why shouldn’t I use those techniques for a good addiction?`,
-    image: "https://i.postimg.cc/SQf0mF2c/temp-Image-Qe6mea.avif",
+    image: "https://i.postimg.cc/8CR4LDVH/temp-Imagejz-Tp-KS.avif",
   },
   {
     year: 2022,
