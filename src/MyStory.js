@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './MyStory.css';
 
+
 const timelineData = [
   {
     year: 2019,
@@ -10,7 +11,7 @@ const timelineData = [
     this was my first time being away from my family. Back home, I was a spoiled kid who 
     had never opened a bank account or worried much about spending or planning. Being 
     away from home meant that I had to learn to become independent.`,
-    image: "https://drive.google.com/file/d/1YcF6JCd7DTSF3Jegj-hROS-Vjo6bBz6s/view?usp=share_link",
+    image: "https://drive.google.com/uc?id=1MPudyZcAu3K6S-s0yO3XibYGsoAHEKBe",
   },
   {
     year: 2020,
@@ -24,19 +25,7 @@ const timelineData = [
   },
   {
     year: 2021,
-    title: "2021 Friends or not?",
-    text: `As a result of COVID, I didn’t have any friends at school. So, I had to 
-    face the fear of talking to strangers. That’s when I had a conversation with a 
-    classmate who inspired me to set a challenge: talk to a new stranger every day 
-    for a couple of months. So, that’s what I did! It helped me become better at 
-    finding common interests and steering the conversation in that direction. But 
-    believe me, there were plenty of failed attempts along the way to get to that 
-    point!`,
-    image: "path_to_image_2021.jpg",
-  },
-  {
-    year: 2022,
-    title: "2022 Measure",
+    title: "2021 Measure",
     text: `During the cold January, while walking, I was listening to an inspiring 
     podcast about measurement. That’s when I realized that if I wanted to improve 
     something, I needed to measure it first. So, I began tracking how I spent my 
@@ -45,6 +34,18 @@ const timelineData = [
     visual stats, like graphs, to make the process more fun and engaging. After all, 
     why shouldn’t I use those techniques for a good addiction?`,
     image: "path_to_image_2022.jpg",
+  },
+  {
+    year: 2022,
+    title: "2022 Friends or not?",
+    text: `As a result of COVID, I didn’t have any friends at school. So, I had to 
+    face the fear of talking to strangers. That’s when I had a conversation with a 
+    classmate who inspired me to set a challenge: talk to a new stranger every day 
+    for a couple of months. So, that’s what I did! It helped me become better at 
+    finding common interests and steering the conversation in that direction. But 
+    believe me, there were plenty of failed attempts along the way to get to that 
+    point!`,
+    image: "path_to_image_2021.jpg",
   },
   {
     year: 2023,
@@ -85,12 +86,15 @@ function MyStory() {
       });
     }, observerOptions);
 
-    sectionsRef.current.forEach((section) => {
+    // Copy the current ref value to avoid ESLint warnings
+    const currentSections = sectionsRef.current;
+
+    currentSections.forEach((section) => {
       if (section) observer.observe(section);
     });
 
     return () => {
-      sectionsRef.current.forEach((section) => {
+      currentSections.forEach((section) => {
         if (section) observer.unobserve(section);
       });
     };
@@ -121,7 +125,7 @@ function MyStory() {
           >
             <div className="year-card">
               <h1>{item.title}</h1>
-              <img src={item.image} alt={`Image for ${item.year}`} />
+              <img src={item.image} alt={`${item.year} timeline illustration`} />
               <p>{item.text}</p>
             </div>
           </section>
