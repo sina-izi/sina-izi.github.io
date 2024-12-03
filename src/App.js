@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AiOutlineSun, AiOutlineMoon } from 'react-icons/ai';
 import './App.css';
 import Home from './Home';
-import Blog from './Blog';
+import Projects from './Projects';
 import MyStory from './MyStory'; // Import the new component
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
           <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
             <Link className="button" to="/" onClick={toggleMenu}>Home</Link>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button" onClick={toggleMenu}>Resume</a>
-            <Link className="button" to="/blog" onClick={toggleMenu}>Blog</Link>
+            <Link className="button" to="/projects" onClick={toggleMenu}>Projects</Link>
             <Link className="button" to="/my-story" onClick={toggleMenu}>My Story</Link> {/* New Button for mobile */}
             <button className="button theme-toggle" onClick={() => { toggleTheme(); toggleMenu(); }}>
               {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
@@ -63,7 +63,7 @@ function App() {
           <nav className="nav-buttons">
             <Link className="button" to="/">Home</Link>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="button">Resume</a>
-            <Link className="button" to="/blog">Blog</Link>
+            <Link className="button" to="/projects">Projects</Link>
             <Link className="button" to="/my-story">My Story</Link> {/* New Button for desktop */}
             <button className="button theme-toggle" onClick={toggleTheme}>
               {isDarkMode ? <AiOutlineSun /> : <AiOutlineMoon />}
@@ -74,7 +74,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/my-story" element={<MyStory />} /> {/* New Route */}
           </Routes>
         </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Blog() {
+function Projects() {
   return (
     <div>
-      <h2>My Blog</h2>
+      <h2>My Projects</h2>
       <p>Here are some of my personal notes and posts.</p>
     </div>
   );
 }
 
-export default Blog;
+export default Projects;
