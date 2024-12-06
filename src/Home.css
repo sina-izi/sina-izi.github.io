@@ -1,13 +1,15 @@
 /* General Home Container Styles */
 .home-container {
   position: relative;
-  height: 100vh;
-  overflow: visible;
+  height: 80vh;
+  overflow-x: hidden; /* Avoid horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the top */
   align-items: center;
-  padding: 0px;
+  padding-top: 150px; /* Optional: Add some top padding for aesthetics */
+  border-radius: 10px;
 }
 
 /* About Me Section */
@@ -103,13 +105,13 @@
 
 /* Infinite Corridor Background Animation */
 .background-animation {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 0; /* Place behind the content */
-  overflow: auto;
+  overflow: hidden;
 }
 
 /* Adjust body styles for seamless animation */
@@ -122,6 +124,11 @@ body {
 }
 
 @media (max-width: 600px) {
+  .home-container {
+    height: 95vh;
+    padding-top: 20px; /* Optional: Add some top padding for aesthetics */
+  }
+
   .typewriter {
     font-size: 1rem; /* Adjust font size for smaller screens */
     letter-spacing: 0.1em; /* Tweak letter spacing */
