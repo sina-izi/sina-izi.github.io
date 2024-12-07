@@ -1,7 +1,7 @@
 .my-story-page {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   overflow-y: visible;
 }
 
@@ -10,9 +10,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-left: 100px; /* Offset for the timeline */
   max-width: 800px; /* Set a maximum width for centered content */
   margin: auto; /* Center content horizontally */
-  padding-left: 100px; /* Offset for the timeline */
   padding-top: 50px;
   box-sizing: border-box;
   overflow-y: auto;
@@ -47,7 +47,7 @@
 
 .year-card h1 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .year-card p {
@@ -95,6 +95,13 @@
   font-size: 18px;
   font-weight: bold;
   color: #00c8ff;
+}
+
+/* Apply margin-left only on desktop */
+@media (min-width: 992px) {
+  .story-content {
+    padding-left: 0px; /* Offset for the timeline */
+  }
 }
 
 /* Apply margin-left only on desktop */

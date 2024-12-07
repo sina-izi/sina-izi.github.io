@@ -5,7 +5,7 @@ import './MyStory.css';
 const timelineData = [
   {
     year: 2019,
-    title: "2019 Naive Yet Confident (NYC)",
+    title: "2019 Naive Yet Confident(NYC)",
     text: `My journey started here when I came to the United States to chase my own 
     American dream. Of course, it wasn’t going to be a smooth ride all the way. After all, 
     this was my first time being away from my family. Back home, I was a spoiled kid who 
