@@ -47,7 +47,7 @@
 
 .year-card h1 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .year-card p {
@@ -147,7 +147,7 @@
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 25px;
     padding: 10px 20px;
     z-index: 10;
     border-radius: 8px;
@@ -198,5 +198,15 @@
   /* CSS to hide the timeline when the menu is open */
   .hide-timeline {
     display: none !important; /* Hide the timeline regardless of other styles */
+  }
+
+  .year-card {
+    margin: 20px auto; /* Center the card horizontally and vertically */
+    padding: 10px; /* Add some inner spacing */
+  }
+
+  .my-story-page {
+    padding: 5px;
+    padding-top: 20px;
   }
 }
