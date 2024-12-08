@@ -24,7 +24,7 @@
   min-height: 500px; /* Make the card take most of the screen height */
   margin: 20px auto; /* Center the card horizontally and vertically */
   padding: 40px; /* Add some inner spacing */
-  border-radius: 12px; /* Rounded corners for aesthetics */
+  border-radius: 30px; /* Rounded corners for aesthetics */
   box-shadow: 0px 4px 16px rgba(0, 200, 255, 0.4); /* Softer shadow */
   background-color: inherit; /* Keep the card theme dynamic */
   color: inherit; /* Dynamic text color */
@@ -41,7 +41,7 @@
 .year-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 15px;
 }
 

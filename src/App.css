@@ -60,7 +60,7 @@ body, html {
   gap: 20px;
   padding: 10px 20px; /* Add padding around the buttons */
   background-color: inherit; /* Optional: translucent background */
-  border-radius: 8px; /* Optional: rounded corners */
+  border-radius: 20px; /* Optional: rounded corners */
   z-index: 1000;
 }
 
@@ -79,6 +79,7 @@ body, html {
   width: 150px;
   height: 50px; /* Set a fixed height for consistent centering */
   border: none;
+  border-radius: 10px; /* Optional: rounded corners */
   transition: color 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }

@@ -17,7 +17,7 @@
   position: relative;
   z-index: 2; /* Keep it above the animation */
   background-color: rgba(var(--about-me-bg-color), 0.8); /* Slight overlay following mode */
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
