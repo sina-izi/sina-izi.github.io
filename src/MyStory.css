@@ -183,7 +183,7 @@
   }
 
   .timeline-node.active {
-    transform: scale(1.5);
+    transform: scale(2);
     background-color: #00c8ff;
   }
 
