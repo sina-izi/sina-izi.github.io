@@ -102,6 +102,41 @@
   }
 }
 
+.connect-with-me {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(var(--about-me-bg-color), 0.8);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--about-me-font-color);
+}
+
+.connect-with-me h2 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-family: monospace;
+}
+
+.connect-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 2rem;
+}
+
+.connect-icons a {
+  color: inherit;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.connect-icons a:hover {
+  color: #00c8ff;
+  transform: scale(1.2);
+}
+
 /* Infinite Corridor Background Animation */
 .background-animation {
   position: fixed;
@@ -138,4 +173,14 @@ body {
     margin-top: 90px; /* Increase slightly for smaller screens */
     padding: 10px;
   }
+
+  .connect-with-me {
+    padding: 10px; /* ✅ match about-me padding on mobile */
+  }
+}
+
+.about-me,
+.connect-with-me {
+  max-width: 700px;
+  width: 90%;
 }
